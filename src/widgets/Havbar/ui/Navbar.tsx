@@ -11,7 +11,7 @@ interface INavbar {
 export function Navbar({ className }: INavbar) {
   return (
     <div className={classNames(styles.navbar, {}, [className])}>
-      <ThemeSwitcher/>
+     
       <div className={styles.links}>
         <AppLink to="/" className={styles.mainLink} theme={AppLinkTheme.INVERTED}>
           Главная
