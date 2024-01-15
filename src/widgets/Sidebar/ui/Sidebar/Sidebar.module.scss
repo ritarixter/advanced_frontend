@@ -1,7 +1,7 @@
-.Sidebar{
-    background-color: var(--inverted-bg-color);
-    width: var(--sidebar-width);
+.Sidebar {
     height: calc(100vh - var(--navbar-height));
+    width: var(--sidebar-width);
+    background: var(--inverted-bg-color);
     position: relative;
     transition: width 0.3s;
 }
@@ -20,5 +20,4 @@
 
 .lang {
     margin-left: 20px;
-    color: var(--inverted-primary-color)!important;
 }
