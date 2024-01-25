@@ -1,4 +1,5 @@
 .PageLoader {
+<<<<<<< HEAD
   min-height: calc(100vh - var(--navbar-height));
 
   display: flex;
@@ -7,3 +8,11 @@
   flex-grow: 1;
 }
 
+=======
+    min-height: calc(100vh - var(--navbar-height));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+>>>>>>> 3cdc37cf3b0bb92cef445557af90e5660e3c980b
