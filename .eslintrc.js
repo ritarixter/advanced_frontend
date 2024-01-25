@@ -40,7 +40,7 @@ module.exports = {
         //     ignoreAttribute: ['data-testid', 'to'],
         // }],
         'max-len': ['error', { ignoreComments: true, code: 100 }],
-        'linebreak-style': ['error', 'windows'],
+        //'linebreak-style': ['error', 'windows'],
     },
     globals: {
         __IS_DEV__: true,
