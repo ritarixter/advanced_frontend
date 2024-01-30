@@ -14,7 +14,7 @@ const ThemeProvider: FC<IThemeProvider> = ({ children, initalTheme }) => {
         theme,
         setTheme,
     }), [theme]);
-
+  
     return (
         <ThemeContext.Provider value={defaultProps}>
             {children}
