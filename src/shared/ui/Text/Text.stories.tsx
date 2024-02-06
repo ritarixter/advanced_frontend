@@ -1,7 +1,7 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
-import { Text } from './Text';
+import { Text, TextTheme } from './Text';
 
 export default {
     title: 'shared/Text',
@@ -17,6 +17,13 @@ export const Normal = Template.bind({});
 Normal.args = {
     title: 'Заголовок',
     text: 'Параграф которые рассказывает о том что бывает'
+};
+
+export const Error = Template.bind({});
+Error.args = {
+    title: 'Заголовок',
+    text: 'Параграф которые рассказывает о том что бывает',
+    theme: TextTheme.ERROR
 };
 
 export const OnlyTitle = Template.bind({});

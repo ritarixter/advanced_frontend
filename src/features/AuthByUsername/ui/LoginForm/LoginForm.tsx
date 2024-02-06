@@ -3,6 +3,7 @@ import { classNames } from "shared/lib/classNames/classNames";
 import { useTranslation } from "react-i18next";
 import { Button, ThemeButton } from "shared/ui/Button/Button";
 import { Input } from "shared/ui/Input/Input";
+import { Text, TextTheme } from "shared/ui/Text/Text";
 import { useDispatch, useSelector } from "react-redux";
 import { loginActions } from "../../model/slice/loginSlice";
 import { getLoginState } from "../../model/selectors/getLoginState/getLoginState";
@@ -29,13 +30,14 @@ export const LoginForm = memo(({ className }:LoginFormProps) => {
     },[dispatch, password, username])
     return (
         <div className={classNames(styles.LoginForm, {}, [className])}>
-            {error && <div>{error}</div>}
+            <Text title={t("Авторизация")}/>
+            {error && <Text text={error} theme={TextTheme.ERROR}/>}
             <Input value={username}
                 onChange={onChangeUsername} placeholder={t("Введите логин")} type="text"  className={styles.input}/>
             <Input value={password}
                 onChange={onChangePassword} placeholder={t("Введите пароль")} type="text" className={styles.input}/>
             <Button onClick={onLoginClick}
-                className={styles.loginBtn} theme={ThemeButton.BACKGROUND_INVERTED} 
+                className={styles.loginBtn} theme={ThemeButton.OUTLINE} 
                 disabled={isLoading}>{t('Войти')}</Button>
         </div>
     );
