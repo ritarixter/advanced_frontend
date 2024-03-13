@@ -13,9 +13,9 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
         mode,
         entry: paths.entry,
         output: {
-            filename: '[name].[contenthash].js',
+            filename: '[name].[contenthash].js', // contenthash решает проблему кеширования в браузере
             path: paths.build,
-            clean: true,
+            clean: true, // очищаем файлы после новой сборки
         },
         plugins: buildPlugins(options),
         module: {
