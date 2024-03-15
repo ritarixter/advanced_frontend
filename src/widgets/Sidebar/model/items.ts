@@ -18,12 +18,12 @@ export const SidebarItemsList: ISidebarItem[] = [
         Icon:MainIcon
     },
     {
-        path: RoutePath.main,
+        path: RoutePath.about,
         text: 'О сайте',
         Icon:AboutIcon
     },
     {
-        path: RoutePath.main,
+        path: RoutePath.profile,
         text: 'Профиль',
         Icon:ProfileIcon
     },
