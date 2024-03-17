@@ -5,17 +5,29 @@
   padding: 7px 12px;
   background-color: var(--bg-color);
   color: var(--primary-color);
-  transition: all .15s linear;
-  
-cursor: pointer;
+  transition: all 0.15s linear;
+  cursor: pointer;
   &:focus {
-    outline: none;
-    border-color:var(--dark-primary-color);
+    border-color: var(--dark-primary-color);
     color: var(--dark-primary-color);
   }
 
   &:hover {
-    border-color:var(--dark-primary-color);
+    border-color: var(--dark-primary-color);
     color: var(--dark-primary-color);
+  }
+}
+
+.readonly {
+  opacity: 0.5;
+  cursor: auto;
+  &:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+  }
+
+  &:focus {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
   }
 }

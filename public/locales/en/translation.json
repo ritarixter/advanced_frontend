@@ -16,5 +16,8 @@
   "Войти": "Log in",
   "Авторизация": "Authorization",
   "Неверный логин или пароль": "Incorrect username or password",
-  "Выйти": "Exit"
+  "Выйти": "Exit",
+  "Профиль":"Profile",
+  "Укажите страну": "Select a country",
+  "Укажите валюту": "Select a currency"
 }

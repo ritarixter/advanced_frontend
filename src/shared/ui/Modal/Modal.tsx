@@ -1,5 +1,5 @@
-import { FC, ReactNode, MouseEvent, useState, useRef, useEffect, useCallback } from 'react';
-import { classNames } from 'shared/lib/classNames/classNames';
+import { FC, ReactNode, MouseEvent, useState, useRef, useEffect, useCallback, MutableRefObject } from 'react';
+import { Mods, classNames } from 'shared/lib/classNames/classNames';
 import styles from './Modal.module.scss';
 import { Portal } from '../Portal/Portal';
 
@@ -16,9 +16,9 @@ const ANIMATION_DELAY = 150;
 export const Modal: FC<ModalProps> = ({ className, children, isOpen, onClose, lazy }) => {
     const [isClosing, setIsClosing] = useState<boolean>(false)
     const [isMounted, setIsMounted] = useState<boolean>(false)
-    const timeRef = useRef<ReturnType<typeof setTimeout>>()
+    const timeRef = useRef() as MutableRefObject<ReturnType<typeof setTimeout>>
 
-    const mods: Record<string, boolean> = {
+    const mods: Mods = {
         [styles.opened]: isOpen,
         [styles.isClosing]: isClosing
     }
